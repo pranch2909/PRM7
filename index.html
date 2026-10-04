@@ -1,0 +1,1355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    >
+
+    <meta name="theme-color" content="#020408">
+
+    <title>
+        PRM-7 // VYRA INCIDENT PROTOCOL
+    </title>
+
+    <link rel="stylesheet" href="style.css?v=6.0-final">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         FUTURISTIC BACKGROUND
+    ====================================================== -->
+
+    <div class="background-grid"></div>
+
+    <div
+        id="citySkyline"
+        class="city-skyline"
+    ></div>
+
+    <div
+        class="lock-watermark"
+        aria-hidden="true"
+    ></div>
+
+    <div
+        id="particleLayer"
+        class="particle-layer"
+    ></div>
+
+    <div
+        id="effectsLayer"
+        class="effects-layer"
+    ></div>
+
+    <div
+        id="errorFlash"
+        class="error-flash"
+    ></div>
+
+    <div class="scanlines"></div>
+
+
+    <!-- =====================================================
+         TOP BAR
+    ====================================================== -->
+
+    <header class="topbar">
+
+        <div class="brand">
+
+            <span class="brand-symbol">
+                ◇
+            </span>
+
+            <span>
+                PRM-7
+            </span>
+
+        </div>
+
+
+        <div class="system-status">
+
+            <span class="status-dot"></span>
+
+            VYRA ONLINE
+
+        </div>
+
+
+        <!-- COMPROMISE METER -->
+
+        <div class="compromise-meter">
+
+            <div class="compromise-heading">
+
+                <span>
+                    VYRA COMPROMISE
+                </span>
+
+                <strong id="compromiseValue">
+                    55%
+                </strong>
+
+            </div>
+
+
+            <div class="compromise-track">
+
+                <div
+                    id="compromiseFill"
+                    class="compromise-fill"
+                ></div>
+
+            </div>
+
+        </div>
+
+
+        <div
+            id="topLevel"
+            class="level-indicator"
+        >
+            STANDBY
+        </div>
+
+    </header>
+
+
+
+    <main class="app">
+
+
+        <!-- =================================================
+             INTRO
+        ================================================== -->
+
+        <section
+            id="introScreen"
+            class="screen active"
+        >
+
+            <div class="intro-content">
+
+                <div class="eyebrow">
+                    VYRA // INCIDENT PROTOCOL // 2045
+                </div>
+
+
+                <h1>
+                    PRM-7
+                </h1>
+
+
+                <div class="intro-subtitle">
+
+                    THE SYSTEM DOESN'T KNOW
+                    <br>
+                    WHAT HAS ENTERED IT.
+
+                </div>
+
+
+                <div class="intro-line"></div>
+
+
+                <p>
+                    VYRA monitors the city's transport,
+                    healthcare, emergency services,
+                    campus systems and critical infrastructure.
+                </p>
+
+
+                <p class="intro-muted">
+
+                    Something has entered the network.
+
+                    <br><br>
+
+                    Don't trust what looks normal.
+
+                    <br>
+
+                    Prove what is safe.
+
+                </p>
+
+
+                <div class="initial-compromise">
+
+                    INITIAL COMPROMISE
+
+                    <strong>
+                        55%
+                    </strong>
+
+                </div>
+
+
+                <button
+                    id="startGameBtn"
+                    class="primary-btn"
+                >
+
+                    INITIALIZE INVESTIGATION
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LEVEL 1
+        ================================================== -->
+
+        <section
+            id="level1Screen"
+            class="screen"
+        >
+
+            <div class="game-wrapper">
+
+
+                <div class="level-header">
+
+                    <div>
+
+                        <div class="level-number">
+                            LEVEL 01 // FIRST SIGNAL
+                        </div>
+
+                        <h2>
+                            BUILD THE SECURE PATH
+                        </h2>
+
+                    </div>
+
+
+                    <div class="timer-box">
+
+                        <span>
+                            TIME
+                        </span>
+
+                        <strong id="level1Timer">
+                            02:00
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VYRA -->
+
+                <div class="vyra-message">
+
+                    <div class="vyra-icon">
+                        V
+                    </div>
+
+
+                    <div>
+
+                        <div class="message-label">
+                            VYRA // TRANSMISSION
+                        </div>
+
+
+                        <p>
+
+                            Build the path a legitimate
+                            user should travel before
+                            reaching protected data.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MISSION -->
+
+                <div class="mission-box">
+
+                    <div class="mission-label">
+                        ARCHITECTURE PUZZLE
+                    </div>
+
+
+                    <p>
+
+                        Drag components into the correct
+                        order to create a secure request path.
+
+                    </p>
+
+
+                    <p class="small-note">
+
+                        A few components are distractions.
+                        Choose carefully.
+
+                    </p>
+
+                </div>
+
+
+
+                <!-- PATH -->
+
+                <div class="section-label">
+
+                    SECURE REQUEST PATH
+
+                </div>
+
+
+                <div
+                    id="pathSlots"
+                    class="path-slots"
+                >
+
+
+                    <div
+                        class="path-slot"
+                        data-slot="0"
+                        data-expected="authentication"
+                    >
+
+                        <span class="slot-number">
+                            01
+                        </span>
+
+                        <span class="slot-placeholder">
+                            DROP COMPONENT
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="path-slot"
+                        data-slot="1"
+                        data-expected="api"
+                    >
+
+                        <span class="slot-number">
+                            02
+                        </span>
+
+                        <span class="slot-placeholder">
+                            DROP COMPONENT
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="path-slot"
+                        data-slot="2"
+                        data-expected="database"
+                    >
+
+                        <span class="slot-number">
+                            03
+                        </span>
+
+                        <span class="slot-placeholder">
+                            DROP COMPONENT
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="path-slot"
+                        data-slot="3"
+                        data-expected="logging"
+                    >
+
+                        <span class="slot-number">
+                            04
+                        </span>
+
+                        <span class="slot-placeholder">
+                            DROP COMPONENT
+                        </span>
+
+                    </div>
+
+
+                    <div
+                        class="path-slot"
+                        data-slot="4"
+                        data-expected="file-validation"
+                    >
+
+                        <span class="slot-number">
+                            05
+                        </span>
+
+                        <span class="slot-placeholder">
+                            DROP COMPONENT
+                        </span>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- COMPONENT POOL -->
+
+                <div class="section-label">
+
+                    AVAILABLE COMPONENTS
+
+                </div>
+
+
+                <div
+                    id="componentPool"
+                    class="component-pool"
+                >
+
+
+                    <!-- CORRECT COMPONENTS -->
+
+                    <div
+                        class="component"
+                        data-id="authentication"
+                        data-name="AUTHENTICATION"
+                    >
+
+                        <div class="component-symbol">
+                            ◇
+                        </div>
+
+                        <div class="component-name">
+                            AUTHENTICATION
+                        </div>
+
+                        <div class="component-type">
+                            SYSTEM MODULE
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="component"
+                        data-id="api"
+                        data-name="API GATEWAY"
+                    >
+
+                        <div class="component-symbol">
+                            ⌁
+                        </div>
+
+                        <div class="component-name">
+                            API GATEWAY
+                        </div>
+
+                        <div class="component-type">
+                            SYSTEM MODULE
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="component"
+                        data-id="database"
+                        data-name="DATABASE"
+                    >
+
+                        <div class="component-symbol">
+                            ▣
+                        </div>
+
+                        <div class="component-name">
+                            DATABASE
+                        </div>
+
+                        <div class="component-type">
+                            SYSTEM MODULE
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="component"
+                        data-id="logging"
+                        data-name="LOGGING"
+                    >
+
+                        <div class="component-symbol">
+                            ▤
+                        </div>
+
+                        <div class="component-name">
+                            LOGGING
+                        </div>
+
+                        <div class="component-type">
+                            SYSTEM MODULE
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="component"
+                        data-id="file-validation"
+                        data-name="FILE VALIDATION"
+                    >
+
+                        <div class="component-symbol">
+                            □
+                        </div>
+
+                        <div class="component-name">
+                            FILE VALIDATION
+                        </div>
+
+                        <div class="component-type">
+                            SYSTEM MODULE
+                        </div>
+
+                    </div>
+
+
+                    <!-- DISTRACTIONS -->
+
+                    <div
+                        class="component"
+                        data-id="direct-db"
+                        data-name="DIRECT DATABASE ACCESS"
+                    >
+
+                        <div class="component-symbol">
+                            ◇
+                        </div>
+
+                        <div class="component-name">
+                            DIRECT DATABASE ACCESS
+                        </div>
+
+                        <div class="component-type">
+                            SYSTEM MODULE
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="component"
+                        data-id="admin-panel"
+                        data-name="PUBLIC ADMIN PANEL"
+                    >
+
+                        <div class="component-symbol">
+                            ⌁
+                        </div>
+
+                        <div class="component-name">
+                            PUBLIC ADMIN PANEL
+                        </div>
+
+                        <div class="component-type">
+                            SYSTEM MODULE
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        class="component"
+                        data-id="unlimited-upload"
+                        data-name="UNLIMITED FILE UPLOAD"
+                    >
+
+                        <div class="component-symbol">
+                            □
+                        </div>
+
+                        <div class="component-name">
+                            UNLIMITED FILE UPLOAD
+                        </div>
+
+                        <div class="component-type">
+                            SYSTEM MODULE
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- WRONG CHOICE WARNING -->
+
+                <div
+                    id="level1Warning"
+                    class="warning-message hidden"
+                >
+
+                    <span>
+                        ⚠
+                    </span>
+
+
+                    <div>
+
+                        <strong>
+                            UNSAFE PATH
+                        </strong>
+
+                        <p id="warningText"></p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROGRESS -->
+
+                <div class="progress-row">
+
+                    <span>
+
+                        SECURE COMPONENTS:
+
+                        <strong id="componentCount">
+                            0 / 5
+                        </strong>
+
+                    </span>
+
+
+                    <div class="progress-bar">
+
+                        <div
+                            id="progressFill"
+                        ></div>
+
+                    </div>
+
+                </div>
+
+
+
+                <button
+                    id="deployBtn"
+                    class="primary-btn"
+                    disabled
+                >
+
+                    DEPLOY SECURE ARCHITECTURE
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             GLITCH / MEMORY FRAGMENT
+        ================================================== -->
+
+        <section
+            id="glitchScreen"
+            class="screen glitch-screen"
+        >
+
+            <div class="glitch-red"></div>
+            <div class="glitch-cyan"></div>
+            <div class="glitch-purple"></div>
+
+            <div class="glitch-horizontal"></div>
+
+            <div class="glitch-container">
+
+
+                <!-- VALIDATION -->
+
+                <div
+                    id="validationState"
+                    class="validation-state"
+                >
+
+                    <div class="validation-check">
+                        ✓
+                    </div>
+
+                    <div>
+                        ARCHITECTURE VALIDATED
+                    </div>
+
+                </div>
+
+
+
+                <!-- DIAGNOSTIC -->
+
+                <div
+                    id="glitchDiagnostic"
+                    class="glitch-diagnostic hidden"
+                >
+
+                    <div>
+                        SYSTEM INTEGRITY
+                        <span>PASS</span>
+                    </div>
+
+                    <div>
+                        SECURE PATH
+                        <span>VERIFIED</span>
+                    </div>
+
+                    <div>
+                        VYRA CORE
+                        <span>ONLINE</span>
+                    </div>
+
+                    <div class="glitch-danger">
+                        REQUEST CHANNEL
+                        <span>UNSTABLE</span>
+                    </div>
+
+                    <div class="glitch-danger">
+                        UNKNOWN SIGNAL
+                        <span>DETECTED</span>
+                    </div>
+
+                </div>
+
+
+
+                <!-- MEMORY FRAGMENT -->
+
+                <div
+                    id="memoryFragment"
+                    class="memory-fragment hidden"
+                >
+
+                    <div class="fragment-header">
+
+                        <span>
+                            MEMORY FRAGMENT
+                        </span>
+
+                        <span>
+                            RECOVERED // 31%
+                        </span>
+
+                    </div>
+
+
+                    <div class="fragment-body">
+
+                        <div class="fragment-corrupt">
+                            ███ SIGNAL RECOVERY ███
+                        </div>
+
+
+                        <p>
+                           MEMORY FRAGMENT 7a-19,that's not mine! I remember the first
+                            unauthorized signal.
+                        </p>
+
+                        <p>
+                            It came through a request
+                            that looked legitimate.
+                        </p>
+
+                        <p class="fragment-emphasis">
+                            The suspicious signature
+                            wasn't in the message...
+                        </p>
+
+                        <p class="fragment-emphasis">
+                            It was buried in the
+                            sender identity.
+                        </p>
+
+                    </div>
+
+
+                    <div class="fragment-footer">
+
+                        SOURCE MEMORY //
+                        CLINICAL NETWORK
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VYRA CRITICAL LINE -->
+
+                <div
+                    id="glitchVyra"
+                    class="glitch-vyra hidden"
+                >
+
+                    <div class="vyra-icon">
+                        V
+                    </div>
+
+                    <div>
+
+                        <div class="message-label">
+                            VYRA // MEMORY RESTORED
+                        </div>
+
+                        <p>
+                            Something about the sender was wrong.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             LEVEL 2
+        ================================================== -->
+
+        <section
+            id="level2Screen"
+            class="screen"
+        >
+
+            <div class="game-wrapper">
+
+
+                <div class="level-header">
+
+                    <div>
+
+                        <div class="level-number">
+                            LEVEL 02 // REQUEST CHANNEL
+                        </div>
+
+                        <h2>
+                            TRUST NOTHING AT FIRST GLANCE
+                        </h2>
+
+                    </div>
+
+
+                    <div class="timer-box">
+
+                        <span>
+                            TIME
+                        </span>
+
+                        <strong id="level2Timer">
+                            01:45
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- VYRA -->
+
+                <div class="vyra-message">
+
+                    <div class="vyra-icon">
+                        V
+                    </div>
+
+
+                    <div>
+
+                        <div class="message-label">
+                            VYRA // CITY MONITOR
+                        </div>
+
+                        <p>
+
+                            Six requests reached me
+                            during deployment.
+
+                            <br>
+
+                            They look normal.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- MEMORY FRAGMENT CLUE -->
+
+                <div class="memory-reminder">
+
+                    <div class="memory-icon">
+                        ◇
+                    </div>
+
+
+                    <div>
+
+                        <div class="memory-title">
+                            RECOVERED MEMORY FRAGMENT
+                        </div>
+
+
+                        <p>
+                            A previous unauthorized signal came
+                            through a <strong>legitimate-looking request.</strong>
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="mission-box">
+
+                    <div class="mission-label">
+                        REQUEST INVESTIGATION
+                    </div>
+
+
+                    <p>
+                        Investigate all six requests.
+                        Five are legitimate.
+                        One contains the trace.
+                    </p>
+
+
+                    <p class="small-note">
+
+                        Correctly clearing a legitimate
+                        request gives you +3 seconds.
+
+                    </p>
+
+                </div>
+
+
+
+                <div
+                    id="requestList"
+                    class="request-list"
+                ></div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             SUCCESS
+        ================================================== -->
+
+        <section
+            id="successScreen"
+            class="screen result-screen"
+        >
+
+            <div class="result-symbol success">
+                ✓
+            </div>
+
+
+            <div class="eyebrow">
+                REQUEST CHANNEL SECURED
+            </div>
+
+
+            <h2>
+                ANOMALY ISOLATED
+            </h2>
+
+
+            <div class="result-line"></div>
+
+
+            <p>
+                You found the request that
+                carried the unauthorized signal.
+            </p>
+
+
+            <div class="vyra-final-message">
+
+                VYRA //
+                <span>
+                    TRANSMISSION
+                </span>
+
+
+                <p>
+                    You found it.
+                    The request looked legitimate...
+                    because it was designed to.
+                </p>
+
+            </div>
+
+
+            <div class="next-module">
+
+                NEXT MODULE
+
+                <strong>
+                    LEVEL 03 // TRACE THE SIGNAL
+                </strong>
+
+            </div>
+
+
+            <button
+                id="continueBtn"
+                class="primary-btn"
+            >
+
+                CONTINUE INVESTIGATION
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FAILURE
+        ================================================== -->
+
+        <section
+            id="failureScreen"
+            class="screen result-screen"
+        >
+
+            <div class="result-symbol failure">
+                ×
+            </div>
+
+
+            <div class="eyebrow">
+                INCIDENT RESPONSE FAILED
+            </div>
+
+
+            <h2>
+                MISSION FAILED
+            </h2>
+
+
+            <div class="result-line"></div>
+
+
+            <p id="failureReason">
+                Investigation failed.
+            </p>
+
+
+            <div class="vyra-final-message failure-message">
+
+                VYRA //
+                <span>
+                    TRANSMISSION
+                </span>
+
+
+                <p id="failureMessage">
+                    The wrong signal passed through
+                    your investigation.
+                </p>
+
+            </div>
+
+
+            <button
+                id="restartBtn"
+                class="primary-btn"
+            >
+
+                RESTART INVESTIGATION
+
+            </button>
+
+        </section>
+
+
+
+        <!-- =================================================
+             FUTURE LEVEL
+        ================================================== -->
+
+        <section
+            id="futureScreen"
+            class="screen"
+        >
+
+            <div class="future-container">
+
+                <div class="eyebrow">
+                    NEXT INVESTIGATION MODULE
+                </div>
+
+
+                <h2>
+                    LEVEL 03 // TRACE THE SIGNAL
+                </h2>
+
+
+                <p>
+                    Network origin analysis module.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             LEVEL 3 // STORYLINE FINALE
+        ================================================== -->
+
+        <section id="level3Screen" class="screen level3-finale-screen">
+            <div class="game-wrapper storyline-wrapper">
+
+                <div class="level-header level3-header">
+                    <div>
+                        <div class="level-number">LEVEL 03 // STORY FINALE</div>
+                        <h2>END THE INCIDENT</h2>
+                        <p class="level-tagline">TRACE → CONTAIN → RESTORE</p>
+                    </div>
+                    <div class="story-status level3-status-badge" id="level3Status">TRACE 01 / 03</div>
+                </div>
+
+                <div class="vyra-message">
+                    <div class="vyra-icon">V</div>
+                    <div>
+                        <div class="message-label">VYRA // CORE RECOVERY</div>
+                        <p id="level3VyraText">
+                            The sender identity was only the entry point. Follow the signal, contain it, and restore the city core.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="story-ending-banner">
+                    <span>FINAL STORY CHAPTER</span>
+                    <strong>THE SIGNAL ENDS HERE</strong>
+                </div>
+
+                <div class="story-panel" id="level3Panel">
+                    <div class="story-kicker">INCIDENT CLOSURE // DECISION</div>
+                    <h3 id="level3Title">TRACE THE SIGNAL</h3>
+                    <p id="level3Text">
+                        The unauthorized request left three linked traces. Select the safest next action.
+                    </p>
+
+                    <div class="story-options" id="level3Options"></div>
+                    <div class="story-feedback" id="level3Feedback"></div>
+                </div>
+
+                <div class="level3-meter-note">
+                    <span>OBJECTIVE</span>
+                    <strong>Reach 0% compromise and close the incident.</strong>
+                </div>
+
+                <div class="story-progress">
+                    <span>FINAL INCIDENT RESPONSE</span>
+                    <div class="story-progress-track">
+                        <div id="level3Progress"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             LEVEL 4 // VYRA CITY QUIZ
+        ================================================== -->
+
+        <section id="level4Screen" class="screen level4-quiz-screen">
+            <div class="game-wrapper quiz-wrapper">
+
+                <div class="level-header level4-header">
+                    <div>
+                        <div class="level-number">LEVEL 04 // CITY KNOWLEDGE</div>
+                        <h2>VYRA CITY QUIZ</h2>
+                        <p class="level-tagline">NO TRACE TO FOLLOW. JUST TEST YOUR KNOWLEDGE.</p>
+                    </div>
+                    <div class="quiz-progress-badge" id="quizProgress">QUESTION 01 / 05</div>
+                </div>
+
+                <div class="quiz-intro-card">
+                    <div class="quiz-intro-icon">?</div>
+                    <div>
+                        <div class="message-label">VYRA // KNOWLEDGE CHECK</div>
+                        <p>Five multiple-choice questions about VYRA City, safe systems, and the investigation you just completed.</p>
+                        <span class="quiz-rule">Choose ONE answer. The next question appears automatically.</span>
+                    </div>
+                </div>
+
+                <div class="quiz-card quiz-card-distinct">
+                    <div class="quiz-number-mark" id="quizNumberMark">01</div>
+                    <div class="quiz-kicker" id="quizCategory">VYRA CITY // QUESTION</div>
+                    <h3 id="quizQuestion"></h3>
+                    <div class="quiz-options" id="quizOptions"></div>
+                    <div class="quiz-feedback" id="quizFeedback"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             LEVEL 5 // FINAL SECURITY CHECK
+        ================================================== -->
+
+        <section id="level5Screen" class="screen level5-lock-screen">
+            <div class="game-wrapper">
+
+                <div class="level-header level5-header">
+                    <div>
+                        <div class="level-number">LEVEL 05 // FINAL SECURITY CHECK</div>
+                        <h2>BREAK THE FINAL LOCK</h2>
+                        <p class="level-tagline">RECALL → MATCH → VERIFY</p>
+                    </div>
+                    <div class="story-status level5-status-badge" id="level5Status">ROUND 01 // PATTERN RECALL</div>
+                </div>
+
+                <div class="level5-rounds" aria-label="Level 5 rounds">
+                    <div class="level5-round active" data-round="1"><b>01</b><span>PATTERN RECALL</span></div>
+                    <div class="level5-round" data-round="2"><b>02</b><span>MEMORY PAIRS</span></div>
+                    <div class="level5-round" data-round="3"><b>03</b><span>FINAL SECURITY QUIZ</span></div>
+                </div>
+
+                <div class="lock-instructions">
+                    <div class="lock-instruction-title">FINAL SECURITY CHECK // HOW TO PLAY</div>
+                    <div class="lock-steps">
+                        <div><b>1</b><span><strong>Pattern Recall:</strong> Read these instructions first. The 8-symbol signal stays visible for a full <strong>20 seconds</strong>. Memorize the exact order.</span></div>
+                        <div><b>2</b><span><strong>Memory Pairs:</strong> Flip two cards at a time. Matching pairs stay open; non-matches close again.</span></div>
+                        <div><b>3</b><span><strong>Final Security Quiz:</strong> Answer four quick cybersecurity decisions. Choose the safest response to unlock the final authorization.</span></div>
+                        <div><b>4</b><span><strong>Victory:</strong> The grand winning page opens only after all five levels and all three Level 5 rounds are complete.</span></div>
+                    </div>
+                    <p id="level5Instruction" class="lock-current-instruction">Read the instructions, then memorize the signal pattern.</p>
+                </div>
+
+                <div class="memory-game-panel pattern-phase-panel level5-round-panel" id="patternPanel">
+                    <div class="memory-kicker">ROUND 01 // SIGNAL PATTERN</div>
+                    <p class="phase-help">The 8-symbol signal remains visible for 20 seconds. Use this time to read, memorize, and confirm the left-to-right order.</p>
+                    <div class="pattern-display" id="patternDisplay"></div>
+                    <div class="pattern-grid" id="patternGrid"></div>
+                    <div class="game-feedback" id="patternFeedback"></div>
+                </div>
+
+                <div class="memory-game-panel hidden memory-phase-panel level5-round-panel" id="memoryPanel">
+                    <div class="memory-kicker">ROUND 02 // MEMORY PAIRS</div>
+                    <p class="phase-help">Find all four matching pairs. Take your time and remember where unmatched cards are hidden.</p>
+                    <div class="memory-grid" id="memoryGrid"></div>
+                    <div class="game-feedback" id="memoryFeedback"></div>
+                </div>
+
+                <div class="memory-game-panel hidden final-quiz-phase-panel level5-round-panel" id="finalQuizPanel">
+                    <div class="memory-kicker">ROUND 03 // FINAL SECURITY QUIZ</div>
+                    <p class="phase-help">Choose the safest cybersecurity response. Each answer is checked immediately, and the next decision appears automatically.</p>
+                    <div class="final-quiz-progress" id="finalQuizProgress">DECISION 01 / 04</div>
+                    <h3 class="final-quiz-question" id="finalQuizQuestion"></h3>
+                    <div class="quiz-options" id="finalQuizOptions"></div>
+                    <div class="quiz-feedback" id="finalQuizFeedback"></div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =================================================
+             GRAND FINAL WINNING PAGE // ONLY AFTER 05 / 05
+        ================================================== -->
+
+        <section id="winningScreen" class="screen grand-winning-screen">
+            <div class="winning-orbit orbit-one"></div>
+            <div class="winning-orbit orbit-two"></div>
+            <div class="winning-glow"></div>
+
+            <div class="grand-winning-card">
+                <div class="winning-kicker">VYRA CITY // CYBER RESPONSE HALL OF FAME</div>
+                <div class="trophy-wrap" aria-hidden="true">
+                    <div class="trophy">🏆</div>
+                </div>
+                <div class="winning-complete">MISSION COMPLETE // 05 OF 05 LEVELS CLEARED</div>
+                <h2>VYRA CITY IS SAFE</h2>
+                <p class="winning-lead">You traced the incident, closed the storyline, solved the city challenge, broke the memory lock, and passed the final security quiz.</p>
+
+                <div class="winning-stats">
+                    <div><span>FINAL COMPROMISE</span><strong>0%</strong></div>
+                    <div><span>LEVELS CLEARED</span><strong>05 / 05</strong></div>
+                    <div><span>STATUS</span><strong>SECURE</strong></div>
+                </div>
+
+                <div class="winning-certification">
+                    <div class="cert-icon">V</div>
+                    <div>
+                        <span>VYRA // FINAL CERTIFICATION</span>
+                        <strong>CYBER RESPONSE INVESTIGATOR</strong>
+                        <p>Authorization granted. The city core has been restored and the incident is officially closed.</p>
+                    </div>
+                </div>
+
+                <div class="winning-actions">
+                    <div class="build-badge">★ BUILD SECURE<br>MISSION MASTER</div>
+                    <button id="playAgainBtn" class="primary-btn winning-replay-btn">RUN THE INVESTIGATION AGAIN</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <div
+        id="toast"
+        class="toast"
+    ></div>
+
+
+    <script src="script.js?v=6.0-final"></script>
+</body>
+</html>
